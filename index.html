@@ -1,60 +1,964 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Raj Patil — MBA Sales & Marketing student, sales and marketing professional, FMCG enthusiast and business strategist."
-  >
+  <meta name="description"
+    content="Raj Patil — MBA Sales & Marketing professional with experience in FMCG sales, business strategy, mentorship and market execution.">
 
   <title>Raj Patil — Sales & Marketing</title>
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  >
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+    rel="stylesheet">
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f3f1ea;
+      color: #171717;
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.5;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =====================================================
+       VARIABLES
+    ===================================================== */
+
+    :root {
+      --cream: #f3f1ea;
+      --paper: #e7e3d8;
+      --black: #181818;
+      --lime: #d8ff35;
+      --gray: #777;
+      --line: #d2cfc5;
+      --max: 1400px;
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      background: rgba(243, 241, 234, 0.92);
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      max-width: var(--max);
+      margin: auto;
+
+      padding: 20px 5vw;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    nav a {
+      transition: opacity 0.2s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.5;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+      max-width: var(--max);
+      margin: auto;
+
+      min-height: 100vh;
+
+      padding: 150px 5vw 80px;
+
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .hero-small {
+      font-size: 12px;
+      font-weight: 600;
+
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+
+      margin-bottom: 35px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(65px, 9vw, 145px);
+
+      line-height: 0.86;
+
+      letter-spacing: -0.065em;
+
+      font-weight: 500;
+    }
+
+    h1 em {
+      font-style: italic;
+    }
+
+    .hero-description {
+      max-width: 560px;
+
+      margin-top: 45px;
+
+      font-size: 17px;
+      line-height: 1.7;
+
+      color: #555;
+    }
+
+    .hero-links {
+      margin-top: 35px;
+
+      display: flex;
+      gap: 25px;
+
+      font-size: 13px;
+      font-weight: 600;
+
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-links a {
+      border-bottom: 1px solid #222;
+      padding-bottom: 4px;
+    }
+
+
+    /* =====================================================
+       PROFILE IMAGE
+    ===================================================== */
+
+    .hero-photo {
+      width: 100%;
+      max-width: 440px;
+
+      margin-left: auto;
+
+      background: var(--paper);
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 560px;
+
+      object-fit: cover;
+      object-position: center top;
+
+      filter: grayscale(100%);
+    }
+
+
+    /* =====================================================
+       INTRO
+    ===================================================== */
+
+    .intro {
+      background: var(--black);
+      color: white;
+
+      padding: 120px 5vw;
+    }
+
+    .intro-inner {
+      max-width: var(--max);
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+
+      gap: 80px;
+    }
+
+    .label {
+      font-size: 11px;
+      font-weight: 600;
+
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+
+      color: #aaa;
+    }
+
+    .intro h2 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(42px, 5vw, 78px);
+
+      line-height: 0.98;
+
+      font-weight: 500;
+
+      letter-spacing: -0.04em;
+    }
+
+    .intro h2 em {
+      color: var(--lime);
+    }
+
+    .intro-text p {
+      max-width: 700px;
+
+      margin-bottom: 25px;
+
+      font-size: 18px;
+      line-height: 1.75;
+
+      color: #c4c4c4;
+    }
+
+
+    /* =====================================================
+       MARQUEE
+    ===================================================== */
+
+    .marquee {
+      overflow: hidden;
+
+      border-bottom: 1px solid var(--line);
+      border-top: 1px solid var(--line);
+
+      background: var(--lime);
+
+      padding: 18px 0;
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+
+      animation: move 25s linear infinite;
+    }
+
+    .marquee span {
+      font-size: 13px;
+      font-weight: 700;
+
+      letter-spacing: 0.16em;
+
+      margin-right: 70px;
+    }
+
+    @keyframes move {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+
+    /* =====================================================
+       STATS
+    ===================================================== */
+
+    .stats-section {
+      max-width: var(--max);
+      margin: auto;
+
+      padding: 110px 5vw;
+    }
+
+    .stats-heading {
+      margin-bottom: 50px;
+    }
+
+    .stats-heading h2 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(45px, 6vw, 85px);
+
+      line-height: 0.95;
+
+      font-weight: 500;
+
+      letter-spacing: -0.05em;
+    }
+
+    .stats-heading em {
+      font-style: italic;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 14px;
+    }
+
+    .stat-card {
+      min-height: 190px;
+
+      border: 1px solid #c9c6bc;
+
+      padding: 28px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      background: #f7f5ef;
+
+      transition: 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      background: white;
+    }
+
+    .stat-card strong {
+      font-family: "Playfair Display", serif;
+
+      font-size: 48px;
+      font-weight: 500;
+
+      letter-spacing: -0.04em;
+    }
+
+    .stat-card span {
+      max-width: 250px;
+
+      font-size: 11px;
+      line-height: 1.6;
+
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+
+      color: #666;
+    }
+
+
+    /* =====================================================
+       SELECTED WORK
+    ===================================================== */
+
+    .work-section {
+      max-width: var(--max);
+      margin: auto;
+
+      padding: 100px 5vw;
+    }
+
+    .work-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+
+      margin-bottom: 55px;
+    }
+
+    .work-header h2 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(50px, 7vw, 100px);
+
+      line-height: 0.9;
+
+      font-weight: 500;
+
+      letter-spacing: -0.055em;
+    }
+
+    .work-header h2 em {
+      font-style: italic;
+    }
+
+    .work-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 30px;
+    }
+
+    .work-card {
+      min-height: 650px;
+
+      padding: 55px;
+
+      display: flex;
+      flex-direction: column;
+
+      position: relative;
+
+      overflow: hidden;
+
+      transition: transform 0.4s ease;
+    }
+
+    .work-card:hover {
+      transform: translateY(-7px);
+    }
+
+    .work-card.dark {
+      background: var(--black);
+      color: white;
+    }
+
+    .work-card.light {
+      background: var(--paper);
+      color: var(--black);
+    }
+
+    .work-card.lime {
+      background: var(--lime);
+      color: var(--black);
+    }
+
+    .work-number {
+      font-size: 13px;
+
+      margin-bottom: 35px;
+    }
+
+    .work-category {
+      font-size: 12px;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .work-title {
+      margin-top: auto;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(48px, 5vw, 75px);
+
+      line-height: 0.91;
+
+      letter-spacing: -0.055em;
+    }
+
+    .work-link {
+      margin-top: 45px;
+
+      font-size: 14px;
+    }
+
+
+    /* =====================================================
+       EXPERIENCE
+    ===================================================== */
+
+    .experience {
+      background: var(--black);
+      color: white;
+
+      padding: 120px 5vw;
+    }
+
+    .experience-inner {
+      max-width: var(--max);
+      margin: auto;
+    }
+
+    .experience-heading {
+      display: grid;
+
+      grid-template-columns: 0.6fr 1.4fr;
+
+      gap: 70px;
+
+      margin-bottom: 80px;
+    }
+
+    .experience-heading h2 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(50px, 6vw, 90px);
+
+      line-height: 0.92;
+
+      font-weight: 500;
+
+      letter-spacing: -0.05em;
+    }
+
+    .experience-heading em {
+      color: var(--lime);
+      font-style: italic;
+    }
+
+    .experience-item {
+      display: grid;
+
+      grid-template-columns: 0.6fr 1.4fr;
+
+      gap: 70px;
+
+      padding: 45px 0;
+
+      border-top: 1px solid #3a3a3a;
+    }
+
+    .experience-meta {
+      color: #888;
+
+      font-size: 11px;
+
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .experience-main h3 {
+      font-family: "Playfair Display", serif;
+
+      font-size: 38px;
+
+      font-weight: 500;
+
+      margin-bottom: 22px;
+    }
+
+    .experience-main p {
+      max-width: 700px;
+
+      color: #aaa;
+
+      font-size: 15px;
+
+      line-height: 1.7;
+
+      margin-bottom: 16px;
+    }
+
+
+    /* =====================================================
+       ACHIEVEMENT
+    ===================================================== */
+
+    .achievement {
+      padding: 120px 5vw;
+
+      max-width: var(--max);
+      margin: auto;
+    }
+
+    .achievement-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 80px;
+
+      align-items: start;
+    }
+
+    .achievement h2 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(50px, 6vw, 90px);
+
+      line-height: 0.9;
+
+      font-weight: 500;
+
+      letter-spacing: -0.05em;
+    }
+
+    .achievement h2 em {
+      font-style: italic;
+    }
+
+    .achievement-item {
+      padding: 30px 0;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .achievement-item strong {
+      display: block;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 38px;
+
+      font-weight: 500;
+
+      margin-bottom: 10px;
+    }
+
+    .achievement-item span {
+      color: #666;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       EDUCATION
+    ===================================================== */
+
+    .education {
+      background: var(--paper);
+
+      padding: 110px 5vw;
+    }
+
+    .education-inner {
+      max-width: var(--max);
+      margin: auto;
+    }
+
+    .education-heading {
+      margin-bottom: 60px;
+    }
+
+    .education-heading h2 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(50px, 6vw, 85px);
+
+      line-height: 0.9;
+
+      font-weight: 500;
+
+      letter-spacing: -0.05em;
+    }
+
+    .education-item {
+      display: grid;
+
+      grid-template-columns: 150px 1fr;
+
+      padding: 35px 0;
+
+      border-top: 1px solid #c8c4b9;
+    }
+
+    .education-year {
+      font-size: 11px;
+
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+
+      color: #777;
+    }
+
+    .education-item h3 {
+      font-family: "Playfair Display", serif;
+
+      font-size: 30px;
+
+      font-weight: 500;
+    }
+
+    .education-item p {
+      margin-top: 7px;
+
+      color: #666;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    .contact {
+      background: var(--lime);
+
+      padding: 120px 5vw;
+    }
+
+    .contact-inner {
+      max-width: var(--max);
+      margin: auto;
+    }
+
+    .contact h2 {
+      max-width: 1000px;
+
+      margin-top: 35px;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(60px, 9vw, 130px);
+
+      line-height: 0.85;
+
+      font-weight: 500;
+
+      letter-spacing: -0.065em;
+    }
+
+    .contact h2 em {
+      font-style: italic;
+    }
+
+    .contact-info {
+      margin-top: 65px;
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 35px;
+    }
+
+    .contact-info a {
+      font-size: 15px;
+
+      border-bottom: 1px solid #222;
+
+      padding-bottom: 5px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      background: var(--black);
+      color: white;
+
+      padding: 30px 5vw;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      font-size: 11px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.1em;
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 130px;
+
+        gap: 55px;
+      }
+
+      .hero-photo {
+        margin: 0;
+
+        max-width: 100%;
+      }
+
+      .hero-photo img {
+        height: 500px;
+      }
+
+      .intro-inner,
+      .experience-heading,
+      .experience-item {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .achievement-grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .nav {
+        padding: 18px 20px;
+      }
+
+      .hero {
+        padding: 120px 20px 60px;
+      }
+
+      h1 {
+        font-size: 65px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-photo img {
+        height: 440px;
+      }
+
+      .intro,
+      .experience,
+      .contact,
+      .education {
+        padding: 80px 20px;
+      }
+
+      .stats-section,
+      .work-section,
+      .achievement {
+        padding: 80px 20px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-card {
+        min-height: 160px;
+      }
+
+      .work-card {
+        min-height: 560px;
+
+        padding: 35px;
+      }
+
+      .work-title {
+        font-size: 55px;
+      }
+
+      .experience-main h3 {
+        font-size: 30px;
+      }
+
+      .education-item {
+        grid-template-columns: 80px 1fr;
+      }
+
+      footer {
+        padding: 25px 20px;
+
+        flex-direction: column;
+
+        gap: 10px;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 
 <body>
 
+
   <!-- =====================================================
-       HEADER / NAVIGATION
-  ====================================================== -->
+       HEADER
+  ===================================================== -->
 
-  <header class="site-header">
+  <header>
 
-    <div class="nav-container">
+    <div class="nav">
 
-      <a href="#home" class="logo">
-        Raj Patil
+      <a href="#top" class="logo">
+        RAJ PATIL
       </a>
 
-      <nav class="main-nav">
+      <nav>
 
         <a href="#about">About</a>
-        <a href="#experience">Experience</a>
+
         <a href="#work">Work</a>
-        <a href="#skills">Skills</a>
+
+        <a href="#experience">Experience</a>
+
         <a href="#contact">Contact</a>
 
       </nav>
-
-      <button class="menu-toggle" aria-label="Open menu">
-        ☰
-      </button>
 
     </div>
 
@@ -63,66 +967,51 @@
 
 
   <!-- =====================================================
-       MAIN CONTENT
-  ====================================================== -->
+       HERO
+  ===================================================== -->
 
-  <main>
+  <main id="top">
 
+    <section class="hero">
 
-    <!-- ===================================================
-         HERO SECTION
-    ==================================================== -->
+      <div>
 
-    <section class="hero" id="home">
+        <div class="hero-small">
+          MBA · SALES & MARKETING · PUNE
+        </div>
 
-      <div class="hero-content">
+        <h1>
+          Raj<br>
+          <em>Patil.</em>
+        </h1>
 
-        <div class="hero-text">
+        <p class="hero-description">
+          MBA Sales & Marketing professional building experience
+          across FMCG sales, retail distribution, business strategy,
+          mentorship and market execution.
+        </p>
 
-          <p class="eyebrow">
-            MBA — SALES & MARKETING
-          </p>
+        <div class="hero-links">
 
-          <h1>
-            Building brands,<br>
-            driving <em>growth.</em>
-          </h1>
+          <a href="#work">
+            View Work ↗
+          </a>
 
-          <p class="hero-description">
-            I’m Raj Patil, an MBA Sales & Marketing student with
-            hands-on experience across FMCG sales, distribution,
-            business strategy, brand building and stakeholder management.
-          </p>
-
-          <div class="hero-buttons">
-
-            <a href="#work" class="btn btn-primary">
-              Explore My Work
-            </a>
-
-            <a href="#contact" class="btn btn-secondary">
-              Get In Touch
-            </a>
-
-          </div>
+          <a href="#contact">
+            Contact ↗
+          </a>
 
         </div>
 
+      </div>
 
-        <!-- PROFILE IMAGE -->
 
-        <div class="hero-image">
+      <div class="hero-photo">
 
-          <div class="portrait-placeholder">
-
-            <img
-              src="raj-photo.jpg"
-              alt="Raj Patil — Sales and Marketing"
-            >
-
-          </div>
-
-        </div>
+        <img
+          src="raj-photo.jpg"
+          alt="Raj Patil"
+        >
 
       </div>
 
@@ -130,497 +1019,321 @@
 
 
 
-    <!-- ===================================================
+    <!-- =====================================================
          MARQUEE
-    ==================================================== -->
+    ===================================================== -->
 
-    <section class="marquee">
+    <div class="marquee">
 
       <div class="marquee-track">
 
         <span>SALES</span>
         <span>MARKETING</span>
         <span>FMCG</span>
-        <span>BRAND STRATEGY</span>
+        <span>STRATEGY</span>
+        <span>BRAND BUILDING</span>
+        <span>RETAIL</span>
         <span>SALES OPERATIONS</span>
-        <span>CONTENT</span>
 
         <span>SALES</span>
         <span>MARKETING</span>
         <span>FMCG</span>
-        <span>BRAND STRATEGY</span>
+        <span>STRATEGY</span>
+        <span>BRAND BUILDING</span>
+        <span>RETAIL</span>
         <span>SALES OPERATIONS</span>
-        <span>CONTENT</span>
 
       </div>
 
-    </section>
+    </div>
 
 
 
-    <!-- ===================================================
-         ABOUT SECTION
-    ==================================================== -->
+    <!-- =====================================================
+         INTRO
+    ===================================================== -->
 
-    <section class="about section" id="about">
+    <section class="intro" id="about">
 
-      <div class="section-label">
-        ABOUT ME
-      </div>
+      <div class="intro-inner">
 
-      <div class="about-content">
+        <div class="label">
+          INTRO
+        </div>
 
         <div>
 
           <h2>
             From agriculture<br>
-            to <em>business growth.</em>
+            to <em>business.</em>
+          </h2>
+
+          <div class="intro-text">
+
+            <p>
+              I am currently pursuing my MBA in Marketing at
+              COEP Technological University, Pune, after completing
+              my B.Sc. (Hons.) Agriculture.
+            </p>
+
+            <p>
+              My experience sits at the intersection of sales,
+              marketing, FMCG distribution, business strategy and
+              people development.
+            </p>
+
+            <p>
+              I enjoy working close to the market — understanding
+              customers, retailers and teams, identifying
+              opportunities and turning insights into action.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         STATS
+    ===================================================== -->
+
+    <section class="stats-section">
+
+      <div class="stats-heading">
+
+        <div class="label">
+          IMPACT
+        </div>
+
+        <h2>
+          Numbers that<br>
+          <em>tell the story.</em>
+        </h2>
+
+      </div>
+
+
+      <div class="stats-grid">
+
+        <div class="stat-card">
+
+          <strong>₹23.43L</strong>
+
+          <span>
+            Sales Order Value — AMUL Pune
+          </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <strong>80+</strong>
+
+          <span>
+            Retail Stores Managed — Parle-G
+          </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <strong>₹8L</strong>
+
+          <span>
+            Weekly FMCG Dispatch — Parle-G
+          </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <strong>50+</strong>
+
+          <span>
+            MBA Students Mentored — Symbiosis International University Dubai
+          </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <strong>₹2.3L</strong>
+
+          <span>
+            Revenue Supported — Victory Lap YT Channel
+          </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <strong>150+</strong>
+
+          <span>
+            Farmers Trained — Agriculture Programs
+          </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <strong>180+</strong>
+
+          <span>
+            Students Managed — Sports Events
+          </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <strong>₹60K+</strong>
+
+          <span>
+            Sales Generated — AMUL Rakhi Campaign
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SELECTED WORK
+    ===================================================== -->
+
+    <section class="work-section" id="work">
+
+      <div class="work-header">
+
+        <div>
+
+          <div class="label">
+            SELECTED WORK
+          </div>
+
+          <h2>
+            Work with<br>
+            <em>purpose.</em>
           </h2>
 
         </div>
 
-        <div class="about-text">
-
-          <p>
-            I’m currently pursuing my MBA in Sales & Marketing
-            at COEP Technological University, Pune, after completing
-            my B.Sc. (Hons.) Agriculture.
-          </p>
-
-          <p>
-            My experience combines FMCG sales and distribution,
-            business strategy, marketing, mentorship and
-            on-ground market execution.
-          </p>
-
-          <p>
-            I enjoy understanding customers, identifying market
-            opportunities and turning insights into practical
-            business outcomes.
-          </p>
-
-        </div>
-
       </div>
 
-    </section>
-
-
-
-    <!-- ===================================================
-         STATS / ACHIEVEMENT BOXES
-    ==================================================== -->
-
-    <section class="stats" aria-label="Career highlights">
-
-      <div class="stat-card">
-
-        <strong>₹23.43L</strong>
-
-        <span>
-          Sales Order Value — AMUL Pune
-        </span>
-
-      </div>
-
-
-      <div class="stat-card">
-
-        <strong>80+</strong>
-
-        <span>
-          Retail Stores Managed — Parle-G
-        </span>
-
-      </div>
-
-
-      <div class="stat-card">
-
-        <strong>₹8L</strong>
-
-        <span>
-          Weekly FMCG Dispatch — Parle-G
-        </span>
-
-      </div>
-
-
-      <div class="stat-card">
-
-        <strong>50+</strong>
-
-        <span>
-          MBA Students Mentored — Symbiosis International University Dubai
-        </span>
-
-      </div>
-
-
-      <div class="stat-card">
-
-        <strong>₹2.3L</strong>
-
-        <span>
-          Revenue Supported — Victory Lap YT Channel
-        </span>
-
-      </div>
-
-
-      <div class="stat-card">
-
-        <strong>150+</strong>
-
-        <span>
-          Farmers Trained — Agriculture Programs
-        </span>
-
-      </div>
-
-
-      <div class="stat-card">
-
-        <strong>180+</strong>
-
-        <span>
-          Students Managed — Sports Events
-        </span>
-
-      </div>
-
-
-      <div class="stat-card">
-
-        <strong>₹60K+</strong>
-
-        <span>
-          Sales Generated — AMUL Rakhi Campaign
-        </span>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         EXPERIENCE SECTION
-    ==================================================== -->
-
-    <section class="experience section" id="experience">
-
-      <div class="section-label">
-        EXPERIENCE
-      </div>
-
-      <div class="section-heading">
-
-        <h2>
-          Where I’ve<br>
-          <em>created impact.</em>
-        </h2>
-
-      </div>
-
-
-      <!-- AMUL -->
-
-      <article class="experience-item">
-
-        <div class="experience-meta">
-
-          <span>2026</span>
-          <span>SALES & MARKETING INTERN</span>
-
-        </div>
-
-        <div class="experience-main">
-
-          <h3>AMUL — GCMMF</h3>
-
-          <p>
-            Drove retail expansion across 13 market beats in Pune,
-            generating ₹23.43L in total order value through
-            on-ground sales execution and retailer engagement.
-          </p>
-
-          <p>
-            Executed 847 outlet-order instances while using the
-            AMUL SFA application for order booking, beat management
-            and sales tracking.
-          </p>
-
-          <p>
-            Led the AMUL Rakhi festival campaign, generating
-            ₹60,000+ in sales within two days through product
-            display, merchandising and retailer engagement.
-          </p>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- KLA FOODS -->
-
-      <article class="experience-item">
-
-        <div class="experience-meta">
-
-          <span>2026</span>
-          <span>BUSINESS STRATEGY & CONSULTING</span>
-
-        </div>
-
-        <div class="experience-main">
-
-          <h3>KLA Foods</h3>
-
-          <p>
-            Assisted in developing a Performance Management System
-            for 25 blue-collar employees at a ₹500 Cr FMCG company.
-          </p>
-
-          <p>
-            Worked on KPI identification, role mapping,
-            competency frameworks, daily checklists and appraisal
-            structures.
-          </p>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- PARLE-G -->
-
-      <article class="experience-item">
-
-        <div class="experience-meta">
-
-          <span>2025</span>
-          <span>FMCG SALES & DISTRIBUTION</span>
-
-        </div>
-
-        <div class="experience-main">
-
-          <h3>Parle-G — Adhiraj Enterprise</h3>
-
-          <p>
-            Managed wholesale distribution across 80+ retail stores
-            while supporting weekly FMCG dispatches worth approximately
-            ₹8 lakh.
-          </p>
-
-          <p>
-            Strengthened retailer relationships through market visits,
-            order handling, communication and delivery coordination.
-          </p>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- SYMBIOSIS -->
-
-      <article class="experience-item">
-
-        <div class="experience-meta">
-
-          <span>2025–2026</span>
-          <span>MENTORSHIP COORDINATOR</span>
-
-        </div>
-
-        <div class="experience-main">
-
-          <h3>Symbiosis International University, Dubai</h3>
-
-          <p>
-            Coordinated a four-month MBA mentorship initiative
-            supporting 50+ students through structured career
-            readiness activities.
-          </p>
-
-          <p>
-            Guided students on CV building, LinkedIn optimization,
-            HR preparation, mock interviews and case competitions.
-          </p>
-
-        </div>
-
-      </article>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         FEATURE / AMUL CAMPAIGN
-    ==================================================== -->
-
-    <section class="feature">
-
-      <div class="feature-content">
-
-        <p class="eyebrow">
-          FEATURED EXPERIENCE
-        </p>
-
-        <h2>
-          ₹60K+ sales in<br>
-          <em>2 days.</em>
-        </h2>
-
-        <p>
-          Led the on-ground execution of an AMUL Rakhi festival
-          campaign through product display, merchandising and
-          direct retailer engagement.
-        </p>
-
-      </div>
-
-      <div class="feature-number">
-        ₹60K+
-      </div>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         SELECTED WORK
-    ==================================================== -->
-
-    <section class="work section" id="work">
-
-      <div class="section-label">
-        SELECTED WORK
-      </div>
 
       <div class="work-grid">
 
 
-        <!-- PROJECT 1 -->
+        <!-- AMUL -->
 
-        <article class="work-card">
+        <article class="work-card dark">
 
           <div class="work-number">
             01
           </div>
 
-          <div>
-
-            <h3>
-              AMUL Retail Sales
-            </h3>
-
-            <p>
-              Retail expansion, beat management, SFA order booking,
-              retailer relationships and FMCG sales execution
-              across Pune.
-            </p>
-
-            <span class="work-tag">
-              SALES · FMCG
-            </span>
-
+          <div class="work-category">
+            AMUL / SALES
           </div>
+
+          <div class="work-title">
+            Retail Beat<br>
+            Performance
+          </div>
+
+          <a href="#experience" class="work-link">
+            View case ↗
+          </a>
 
         </article>
 
 
+        <!-- KLA -->
 
-        <!-- PROJECT 2 -->
-
-        <article class="work-card">
+        <article class="work-card light">
 
           <div class="work-number">
             02
           </div>
 
-          <div>
-
-            <h3>
-              KLA Foods PMS
-            </h3>
-
-            <p>
-              Developed recommendations for a Performance Management
-              System using KPIs, competency mapping, role structures
-              and appraisal frameworks.
-            </p>
-
-            <span class="work-tag">
-              STRATEGY · HR
-            </span>
-
+          <div class="work-category">
+            STRATEGY / KLA FOODS
           </div>
+
+          <div class="work-title">
+            Performance<br>
+            Management<br>
+            System
+          </div>
+
+          <a href="#experience" class="work-link">
+            View case ↗
+          </a>
 
         </article>
 
 
+        <!-- SYMBIOSIS -->
 
-        <!-- PROJECT 3 -->
-
-        <article class="work-card">
+        <article class="work-card lime">
 
           <div class="work-number">
             03
           </div>
 
-          <div>
-
-            <h3>
-              Parle-G Distribution
-            </h3>
-
-            <p>
-              Managed FMCG wholesale distribution across 80+ retail
-              stores with weekly dispatches of approximately ₹8 lakh.
-            </p>
-
-            <span class="work-tag">
-              DISTRIBUTION · SALES
-            </span>
-
+          <div class="work-category">
+            CAREER / MENTORSHIP
           </div>
+
+          <div class="work-title">
+            MBA Career<br>
+            Readiness
+          </div>
+
+          <a href="#experience" class="work-link">
+            View case ↗
+          </a>
 
         </article>
 
 
+        <!-- VICTORY LAP -->
 
-        <!-- PROJECT 4 -->
-
-        <article class="work-card">
+        <article class="work-card dark">
 
           <div class="work-number">
             04
           </div>
 
-          <div>
-
-            <h3>
-              Victory Lap
-            </h3>
-
-            <p>
-              Supported business development and student lead
-              management, contributing to ₹2.3 lakh in revenue
-              generation.
-            </p>
-
-            <span class="work-tag">
-              BUSINESS DEVELOPMENT · MARKETING
-            </span>
-
+          <div class="work-category">
+            BUSINESS DEVELOPMENT
           </div>
+
+          <div class="work-title">
+            Revenue &<br>
+            Student<br>
+            Growth
+          </div>
+
+          <a href="#experience" class="work-link">
+            View case ↗
+          </a>
 
         </article>
 
@@ -630,70 +1343,188 @@
 
 
 
-    <!-- ===================================================
-         SKILLS
-    ==================================================== -->
+    <!-- =====================================================
+         EXPERIENCE
+    ===================================================== -->
 
-    <section class="skills section" id="skills">
+    <section class="experience" id="experience">
 
-      <div class="section-label">
-        SKILLS
-      </div>
+      <div class="experience-inner">
 
-      <div class="skills-content">
+        <div class="experience-heading">
 
-        <div class="skill-group">
+          <div class="label">
+            EXPERIENCE
+          </div>
 
-          <h3>
-            Marketing
-          </h3>
-
-          <p>
-            Brand Strategy · Market Research · Customer Journey
-            Mapping · STP · AIDA · Competitor Analysis
-          </p>
+          <h2>
+            Where I’ve<br>
+            created <em>impact.</em>
+          </h2>
 
         </div>
 
 
-        <div class="skill-group">
+        <!-- AMUL -->
 
-          <h3>
-            Sales
-          </h3>
+        <div class="experience-item">
 
-          <p>
-            FMCG Sales · Retail Sales · Distribution ·
-            Sales Operations · Retailer Management · SFA
-          </p>
+          <div class="experience-meta">
+            2026<br>
+            SALES & MARKETING
+          </div>
+
+          <div class="experience-main">
+
+            <h3>
+              AMUL — GCMMF
+            </h3>
+
+            <p>
+              Drove retail expansion across 13 market beats in Pune,
+              generating ₹23.43L in total order value.
+            </p>
+
+            <p>
+              Executed 847 outlet-order instances while scouting
+              and onboarding new retail stores and using the AMUL
+              SFA application for sales execution.
+            </p>
+
+            <p>
+              Led the Rakhi festival campaign across retail outlets,
+              generating ₹60,000+ in sales within two days through
+              product display, merchandising and retailer engagement.
+            </p>
+
+          </div>
 
         </div>
 
 
-        <div class="skill-group">
+        <!-- KLA FOODS -->
 
-          <h3>
-            Tools
-          </h3>
+        <div class="experience-item">
 
-          <p>
-            MS PowerPoint · Canva · Microsoft Excel ·
-            AMUL SFA · LinkedIn
-          </p>
+          <div class="experience-meta">
+            2026<br>
+            BUSINESS STRATEGY
+          </div>
+
+          <div class="experience-main">
+
+            <h3>
+              KLA Foods (India) Limited
+            </h3>
+
+            <p>
+              Assisted in developing a Performance Management System
+              for 25 blue-collar employees at a ₹500 Cr FMCG brand.
+            </p>
+
+            <p>
+              Worked on KPI identification, competency mapping,
+              role structures, daily checklists and performance
+              appraisal frameworks.
+            </p>
+
+          </div>
 
         </div>
 
 
-        <div class="skill-group">
+        <!-- PARLE -->
 
-          <h3>
-            Business
-          </h3>
+        <div class="experience-item">
 
-          <p>
-            Business Strategy · Stakeholder Management ·
-            Performance Management · Market Analysis
-          </p>
+          <div class="experience-meta">
+            2025<br>
+            FMCG DISTRIBUTION
+          </div>
+
+          <div class="experience-main">
+
+            <h3>
+              Parle-G — Adhiraj Enterprise
+            </h3>
+
+            <p>
+              Managed wholesale distribution operations across
+              80+ retail stores while supporting approximately
+              ₹8 lakh in weekly FMCG product dispatch.
+            </p>
+
+            <p>
+              Achieved 95% on-time dispatch efficiency through
+              logistics planning, order tracking and retailer
+              coordination.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- SYMBIOSIS -->
+
+        <div class="experience-item">
+
+          <div class="experience-meta">
+            2025–2026<br>
+            MENTORSHIP
+          </div>
+
+          <div class="experience-main">
+
+            <h3>
+              Symbiosis International University, Dubai
+            </h3>
+
+            <p>
+              Coordinated a four-month MBA mentorship initiative
+              for 50+ students focused on internship preparedness
+              and career readiness.
+            </p>
+
+            <p>
+              Guided students in CV building, LinkedIn optimization,
+              HR answers, mock interviews, case competitions and
+              structured career profiling.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- VICTORY LAP -->
+
+        <div class="experience-item">
+
+          <div class="experience-meta">
+            2025<br>
+            BUSINESS DEVELOPMENT
+          </div>
+
+          <div class="experience-main">
+
+            <h3>
+              Victory Lap YT Channel
+            </h3>
+
+            <p>
+              Supported ₹2.3 lakh revenue generation by managing
+              100+ student leads, follow-ups and enrollment
+              coordination for a Pre-MBA course.
+            </p>
+
+            <p>
+              Drove 40+ student enrollments using AIDA, STP,
+              SWOT, customer journey mapping and conversion
+              strategies.
+            </p>
+
+          </div>
 
         </div>
 
@@ -703,145 +1534,29 @@
 
 
 
-    <!-- ===================================================
-         EDUCATION
-    ==================================================== -->
+    <!-- =====================================================
+         ACHIEVEMENT
+    ===================================================== -->
 
-    <section class="education section">
+    <section class="achievement">
 
-      <div class="section-label">
-        EDUCATION
-      </div>
+      <div class="achievement-grid">
 
-      <div class="education-list">
+        <div>
 
-
-        <div class="education-item">
-
-          <span class="education-year">
-            PRESENT
-          </span>
-
-          <div>
-
-            <h3>
-              MBA — Marketing
-            </h3>
-
-            <p>
-              COEP Technological University, Pune
-            </p>
-
-            <small>
-              7.41 / 10
-            </small>
-
+          <div class="label">
+            ACHIEVEMENT
           </div>
+
+          <h2>
+            Beyond the<br>
+            <em>numbers.</em>
+          </h2>
 
         </div>
 
 
-
-        <div class="education-item">
-
-          <span class="education-year">
-            2024
-          </span>
-
-          <div>
-
-            <h3>
-              B.Sc. (Hons.) Agriculture
-            </h3>
-
-            <p>
-              MPKV / Dr. D. Y. Patil College of Agriculture
-            </p>
-
-            <small>
-              7.76 / 10
-            </small>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="education-item">
-
-          <span class="education-year">
-            2020
-          </span>
-
-          <div>
-
-            <h3>
-              XII — Science
-            </h3>
-
-            <p>
-              Maharashtra State Board
-            </p>
-
-            <small>
-              64.46%
-            </small>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="education-item">
-
-          <span class="education-year">
-            2018
-          </span>
-
-          <div>
-
-            <h3>
-              X — General
-            </h3>
-
-            <p>
-              Maharashtra State Board
-            </p>
-
-            <small>
-              89.40%
-            </small>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         ACHIEVEMENTS
-    ==================================================== -->
-
-    <section class="achievements section">
-
-      <div class="section-label">
-        ACHIEVEMENTS
-      </div>
-
-      <div class="achievement-content">
-
-        <h2>
-          Beyond the<br>
-          <em>numbers.</em>
-        </h2>
-
-        <div class="achievement-list">
+        <div>
 
           <div class="achievement-item">
 
@@ -850,8 +1565,9 @@
             </strong>
 
             <span>
-              National-Level Millet Quiz Competition —
-              Eat Right Millet Mela & Walkathon 2023
+              National-Level Millet Quiz Competition at the
+              Eat Right Millet Mela & Walkathon 2023,
+              organized by FSSAI and ASSOCHAM.
             </span>
 
           </div>
@@ -860,12 +1576,13 @@
           <div class="achievement-item">
 
             <strong>
-              150+
+              150+ Farmers
             </strong>
 
             <span>
-              Farmers trained through agriculture technology
-              demonstrations and digital tools.
+              Trained through technology demonstrations,
+              digital tools, e-Pik Pahani and sustainable
+              agricultural practices.
             </span>
 
           </div>
@@ -874,11 +1591,12 @@
           <div class="achievement-item">
 
             <strong>
-              250+
+              250+ Farmers
             </strong>
 
             <span>
-              Farmers engaged through Krushi Melava activities.
+              Engaged through Krushi Melava activities
+              focused on sustainable and digital farming.
             </span>
 
           </div>
@@ -891,32 +1609,143 @@
 
 
 
-    <!-- ===================================================
-         CONTACT
-    ==================================================== -->
+    <!-- =====================================================
+         EDUCATION
+    ===================================================== -->
 
-    <section class="contact section" id="contact">
+    <section class="education">
 
-      <div class="section-label">
-        CONTACT
+      <div class="education-inner">
+
+        <div class="education-heading">
+
+          <div class="label">
+            EDUCATION
+          </div>
+
+          <h2>
+            Learning<br>
+            <em>continues.</em>
+          </h2>
+
+        </div>
+
+
+        <div class="education-item">
+
+          <div class="education-year">
+            PRESENT
+          </div>
+
+          <div>
+
+            <h3>
+              MBA — Marketing
+            </h3>
+
+            <p>
+              COEP Technological University, Pune · 7.41 / 10
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="education-item">
+
+          <div class="education-year">
+            2024
+          </div>
+
+          <div>
+
+            <h3>
+              B.Sc. (Hons.) Agriculture
+            </h3>
+
+            <p>
+              MPKV / Dr. D. Y. Patil College of Agriculture,
+              Talsande · 7.76 / 10
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="education-item">
+
+          <div class="education-year">
+            2020
+          </div>
+
+          <div>
+
+            <h3>
+              XII — Science
+            </h3>
+
+            <p>
+              Maharashtra State Board · 64.46%
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="education-item">
+
+          <div class="education-year">
+            2018
+          </div>
+
+          <div>
+
+            <h3>
+              X — General
+            </h3>
+
+            <p>
+              Maharashtra State Board · 89.40%
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="contact-content">
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ===================================================== -->
+
+    <section class="contact" id="contact">
+
+      <div class="contact-inner">
+
+        <div class="label">
+          LET'S CONNECT
+        </div>
 
         <h2>
           Let’s build<br>
           something <em>meaningful.</em>
         </h2>
 
-        <p>
-          Interested in sales, marketing, FMCG, business strategy
-          or collaboration? Let’s connect.
-        </p>
-
-        <div class="contact-links">
+        <div class="contact-info">
 
           <a href="mailto:rajpatil8502@gmail.com">
             rajpatil8502@gmail.com
+          </a>
+
+          <a href="tel:+919325427405">
+            +91 93254 27405
           </a>
 
           <a
@@ -924,7 +1753,7 @@
             target="_blank"
             rel="noopener"
           >
-            LinkedIn
+            LinkedIn ↗
           </a>
 
         </div>
@@ -939,57 +1768,21 @@
 
   <!-- =====================================================
        FOOTER
-  ====================================================== -->
+  ===================================================== -->
 
-  <footer class="site-footer">
+  <footer>
 
-    <div>
-      © <span id="year"></span> Raj Patil
-    </div>
+    <span>
+      © 2026 Raj Patil
+    </span>
 
-    <div>
+    <span>
       Sales · Marketing · FMCG · Strategy
-    </div>
+    </span>
 
   </footer>
 
 
-
-  <!-- Main JavaScript -->
-  <script src="script.js"></script>
-
 </body>
 
 </html>
-```
-
-### Important
-
-**Do not delete sections from this file.** If you want to change your statistics later, only edit the part between:
-
-```html
-<!-- ===================================================
-     STATS / ACHIEVEMENT BOXES
-==================================================== -->
-```
-
-and the closing:
-
-```html
-</section>
-```
-
-Your stats are currently:
-
-* **₹23.43L** — Sales Order Value — AMUL Pune
-* **80+** — Retail Stores Managed — Parle-G
-* **₹8L** — Weekly FMCG Dispatch — Parle-G
-* **50+** — MBA Students Mentored — Symbiosis International University Dubai
-* **₹2.3L** — Revenue Supported — Victory Lap YT Channel
-* **150+** — Farmers Trained — Agriculture Programs
-* **180+** — Students Managed — Sports Events
-* **₹60K+** — Sales Generated — AMUL Rakhi Campaign
-
-The experience and education information above is based on your resume.
-
-**One thing to remember:** this `index.html` uses your existing `styles.css` and `script.js`, and your photo must remain named `raj-photo.jpg` in the same folder as `index.html`.
