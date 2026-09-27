@@ -1,161 +1,995 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Raj Patil — MBA Sales & Marketing portfolio." />
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Raj Patil — MBA Sales & Marketing student, sales and marketing professional, FMCG enthusiast and business strategist."
+  >
+
   <title>Raj Patil — Sales & Marketing</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
+
+
 <body>
 
+  <!-- =====================================================
+       HEADER / NAVIGATION
+  ====================================================== -->
+
   <header class="site-header">
-    <a class="logo" href="#top">Raj Patil</a>
-    <nav class="nav" id="nav">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+
+    <div class="nav-container">
+
+      <a href="#home" class="logo">
+        Raj Patil
+      </a>
+
+      <nav class="main-nav">
+
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+
+      </nav>
+
+      <button class="menu-toggle" aria-label="Open menu">
+        ☰
+      </button>
+
+    </div>
+
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">MBA • SALES & MARKETING • PUNE, INDIA</p>
-        <h1>Building brands,<br><em>driving sales.</em></h1>
-        <p class="hero-text">
-          I’m Raj Patil, an MBA Sales & Marketing student at COEP Technological University,
-          combining field sales experience, FMCG exposure and digital marketing to create
-          practical business impact.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-dark" href="#experience">Explore my work ↓</a>
-          <a class="text-link" href="mailto:your.email@example.com">Let's connect ↗</a>
+
+
+  <!-- =====================================================
+       MAIN CONTENT
+  ====================================================== -->
+
+  <main>
+
+
+    <!-- ===================================================
+         HERO SECTION
+    ==================================================== -->
+
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+
+        <div class="hero-text">
+
+          <p class="eyebrow">
+            MBA — SALES & MARKETING
+          </p>
+
+          <h1>
+            Building brands,<br>
+            driving <em>growth.</em>
+          </h1>
+
+          <p class="hero-description">
+            I’m Raj Patil, an MBA Sales & Marketing student with
+            hands-on experience across FMCG sales, distribution,
+            business strategy, brand building and stakeholder management.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#work" class="btn btn-primary">
+              Explore My Work
+            </a>
+
+            <a href="#contact" class="btn btn-secondary">
+              Get In Touch
+            </a>
+
+          </div>
+
         </div>
+
+
+        <!-- PROFILE IMAGE -->
+
+        <div class="hero-image">
+
+          <div class="portrait-placeholder">
+
+            <img
+              src="raj-photo.jpg"
+              alt="Raj Patil — Sales and Marketing"
+            >
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="hero-card">
-        <div class="portrait-placeholder">
-          <span>RAJ<br>PATIL</span>
-        </div>
-        <div class="card-caption">
-          <span>Currently</span>
-          <strong>Preparing for final placements</strong>
-        </div>
+    </section>
+
+
+
+    <!-- ===================================================
+         MARQUEE
+    ==================================================== -->
+
+    <section class="marquee">
+
+      <div class="marquee-track">
+
+        <span>SALES</span>
+        <span>MARKETING</span>
+        <span>FMCG</span>
+        <span>BRAND STRATEGY</span>
+        <span>SALES OPERATIONS</span>
+        <span>CONTENT</span>
+
+        <span>SALES</span>
+        <span>MARKETING</span>
+        <span>FMCG</span>
+        <span>BRAND STRATEGY</span>
+        <span>SALES OPERATIONS</span>
+        <span>CONTENT</span>
+
       </div>
+
     </section>
 
-    <section class="marquee" aria-label="Areas of expertise">
-      <div>SALES</div><span>✦</span><div>MARKETING</div><span>✦</span>
-      <div>FMCG</div><span>✦</span><div>BRAND STRATEGY</div><span>✦</span>
-      <div>SALES OPERATIONS</div><span>✦</span><div>CONTENT</div><span>✦</span>
-    </section>
 
-    <section class="section about" id="about">
-      <div class="section-label">01 / About</div>
+
+    <!-- ===================================================
+         ABOUT SECTION
+    ==================================================== -->
+
+    <section class="about section" id="about">
+
+      <div class="section-label">
+        ABOUT ME
+      </div>
+
       <div class="about-content">
-        <h2>From agriculture<br>to <em>marketing.</em></h2>
+
         <div>
-          <p class="lead">
-            My journey started with a B.Sc. (Hons.) in Agriculture and moved into an MBA
-            focused on Sales & Marketing. That combination gives me a different lens on
-            consumers, products, distribution and business.
-          </p>
-          <p>
-            I enjoy work that connects strategy with execution — visiting markets, talking
-            to retailers, understanding customer behaviour, building presentations,
-            analysing competitors and turning observations into actionable ideas.
-          </p>
-          <p>
-            During my internships, I have worked across FMCG sales, dairy, business strategy,
-            mentorship and retail distribution. I’m now looking to bring this hands-on
-            perspective into a high-impact sales or marketing role.
-          </p>
+
+          <h2>
+            From agriculture<br>
+            to <em>business growth.</em>
+          </h2>
+
         </div>
+
+        <div class="about-text">
+
+          <p>
+            I’m currently pursuing my MBA in Sales & Marketing
+            at COEP Technological University, Pune, after completing
+            my B.Sc. (Hons.) Agriculture.
+          </p>
+
+          <p>
+            My experience combines FMCG sales and distribution,
+            business strategy, marketing, mentorship and
+            on-ground market execution.
+          </p>
+
+          <p>
+            I enjoy understanding customers, identifying market
+            opportunities and turning insights into practical
+            business outcomes.
+          </p>
+
+        </div>
+
       </div>
+
     </section>
 
-<section class="stats">
 
-  <div class="stat-card">
-    <strong>₹23.43L</strong>
-    <span>Sales Order Value — AMUL Pune</span>
-  </div>
 
-  <div class="stat-card">
-    <strong>80+</strong>
-    <span>Retail Stores Managed — Parle-G</span>
-  </div>
+    <!-- ===================================================
+         STATS / ACHIEVEMENT BOXES
+    ==================================================== -->
 
-  <div class="stat-card">
-    <strong>₹8L</strong>
-    <span>Weekly FMCG Dispatch — Parle-G</span>
-  </div>
+    <section class="stats" aria-label="Career highlights">
 
-  <div class="stat-card">
-    <strong>50+</strong>
-    <span>MBA Students Mentored — Symbiosis International University Dubai</span>
-  </div>
+      <div class="stat-card">
 
-  <div class="stat-card">
-    <strong>₹2.3L</strong>
-    <span>Revenue Supported — Victory Lap YT Channel</span>
-  </div>
+        <strong>₹23.43L</strong>
 
-  <div class="stat-card">
-    <strong>150+</strong>
-    <span>Farmers Trained — Agriculture Programs</span>
-  </div>
+        <span>
+          Sales Order Value — AMUL Pune
+        </span>
 
-  <div class="stat-card">
-    <strong>180+</strong>
-    <span>Students Managed — Sports Events</span>
-  </div>
-
-  <div class="stat-card">
-    <strong>₹60K+</strong>
-    <span>Sales Generated — AMUL Rakhi Campaign</span>
-  </div>
-
-</section>
-</section>
-    <section class="education">
-      <div>
-        <p class="eyebrow">EDUCATION</p>
-        <h2>MBA<br><em>Sales & Marketing</em></h2>
-        <p>COEP Technological University, Pune · 2025–2027</p>
       </div>
-      <div>
-        <p class="eyebrow">PREVIOUS</p>
-        <h2>B.Sc. (Hons.)<br><em>Agriculture</em></h2>
-        <p>MPKV / Dr. D. Y. Patil College of Agriculture · CGPA 7.76</p>
+
+
+      <div class="stat-card">
+
+        <strong>80+</strong>
+
+        <span>
+          Retail Stores Managed — Parle-G
+        </span>
+
       </div>
+
+
+      <div class="stat-card">
+
+        <strong>₹8L</strong>
+
+        <span>
+          Weekly FMCG Dispatch — Parle-G
+        </span>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <strong>50+</strong>
+
+        <span>
+          MBA Students Mentored — Symbiosis International University Dubai
+        </span>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <strong>₹2.3L</strong>
+
+        <span>
+          Revenue Supported — Victory Lap YT Channel
+        </span>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <strong>150+</strong>
+
+        <span>
+          Farmers Trained — Agriculture Programs
+        </span>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <strong>180+</strong>
+
+        <span>
+          Students Managed — Sports Events
+        </span>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <strong>₹60K+</strong>
+
+        <span>
+          Sales Generated — AMUL Rakhi Campaign
+        </span>
+
+      </div>
+
     </section>
 
-    <section class="section contact" id="contact">
-      <div class="section-label">05 / Contact</div>
-      <h2>Have a role,<br>project or <em>idea?</em></h2>
-      <p>I’m open to opportunities in sales, marketing, FMCG, brand management and related roles.</p>
-      <a class="big-email" href="mailto:your.email@example.com">rajpatil8502@gmail.com ↗</a>
-      <div class="socials">
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a>
-        <a href="#" onclick="downloadResume(event)">Resume ↓</a>
+
+
+    <!-- ===================================================
+         EXPERIENCE SECTION
+    ==================================================== -->
+
+    <section class="experience section" id="experience">
+
+      <div class="section-label">
+        EXPERIENCE
       </div>
+
+      <div class="section-heading">
+
+        <h2>
+          Where I’ve<br>
+          <em>created impact.</em>
+        </h2>
+
+      </div>
+
+
+      <!-- AMUL -->
+
+      <article class="experience-item">
+
+        <div class="experience-meta">
+
+          <span>2026</span>
+          <span>SALES & MARKETING INTERN</span>
+
+        </div>
+
+        <div class="experience-main">
+
+          <h3>AMUL — GCMMF</h3>
+
+          <p>
+            Drove retail expansion across 13 market beats in Pune,
+            generating ₹23.43L in total order value through
+            on-ground sales execution and retailer engagement.
+          </p>
+
+          <p>
+            Executed 847 outlet-order instances while using the
+            AMUL SFA application for order booking, beat management
+            and sales tracking.
+          </p>
+
+          <p>
+            Led the AMUL Rakhi festival campaign, generating
+            ₹60,000+ in sales within two days through product
+            display, merchandising and retailer engagement.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- KLA FOODS -->
+
+      <article class="experience-item">
+
+        <div class="experience-meta">
+
+          <span>2026</span>
+          <span>BUSINESS STRATEGY & CONSULTING</span>
+
+        </div>
+
+        <div class="experience-main">
+
+          <h3>KLA Foods</h3>
+
+          <p>
+            Assisted in developing a Performance Management System
+            for 25 blue-collar employees at a ₹500 Cr FMCG company.
+          </p>
+
+          <p>
+            Worked on KPI identification, role mapping,
+            competency frameworks, daily checklists and appraisal
+            structures.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- PARLE-G -->
+
+      <article class="experience-item">
+
+        <div class="experience-meta">
+
+          <span>2025</span>
+          <span>FMCG SALES & DISTRIBUTION</span>
+
+        </div>
+
+        <div class="experience-main">
+
+          <h3>Parle-G — Adhiraj Enterprise</h3>
+
+          <p>
+            Managed wholesale distribution across 80+ retail stores
+            while supporting weekly FMCG dispatches worth approximately
+            ₹8 lakh.
+          </p>
+
+          <p>
+            Strengthened retailer relationships through market visits,
+            order handling, communication and delivery coordination.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- SYMBIOSIS -->
+
+      <article class="experience-item">
+
+        <div class="experience-meta">
+
+          <span>2025–2026</span>
+          <span>MENTORSHIP COORDINATOR</span>
+
+        </div>
+
+        <div class="experience-main">
+
+          <h3>Symbiosis International University, Dubai</h3>
+
+          <p>
+            Coordinated a four-month MBA mentorship initiative
+            supporting 50+ students through structured career
+            readiness activities.
+          </p>
+
+          <p>
+            Guided students on CV building, LinkedIn optimization,
+            HR preparation, mock interviews and case competitions.
+          </p>
+
+        </div>
+
+      </article>
+
     </section>
+
+
+
+    <!-- ===================================================
+         FEATURE / AMUL CAMPAIGN
+    ==================================================== -->
+
+    <section class="feature">
+
+      <div class="feature-content">
+
+        <p class="eyebrow">
+          FEATURED EXPERIENCE
+        </p>
+
+        <h2>
+          ₹60K+ sales in<br>
+          <em>2 days.</em>
+        </h2>
+
+        <p>
+          Led the on-ground execution of an AMUL Rakhi festival
+          campaign through product display, merchandising and
+          direct retailer engagement.
+        </p>
+
+      </div>
+
+      <div class="feature-number">
+        ₹60K+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         SELECTED WORK
+    ==================================================== -->
+
+    <section class="work section" id="work">
+
+      <div class="section-label">
+        SELECTED WORK
+      </div>
+
+      <div class="work-grid">
+
+
+        <!-- PROJECT 1 -->
+
+        <article class="work-card">
+
+          <div class="work-number">
+            01
+          </div>
+
+          <div>
+
+            <h3>
+              AMUL Retail Sales
+            </h3>
+
+            <p>
+              Retail expansion, beat management, SFA order booking,
+              retailer relationships and FMCG sales execution
+              across Pune.
+            </p>
+
+            <span class="work-tag">
+              SALES · FMCG
+            </span>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 2 -->
+
+        <article class="work-card">
+
+          <div class="work-number">
+            02
+          </div>
+
+          <div>
+
+            <h3>
+              KLA Foods PMS
+            </h3>
+
+            <p>
+              Developed recommendations for a Performance Management
+              System using KPIs, competency mapping, role structures
+              and appraisal frameworks.
+            </p>
+
+            <span class="work-tag">
+              STRATEGY · HR
+            </span>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 3 -->
+
+        <article class="work-card">
+
+          <div class="work-number">
+            03
+          </div>
+
+          <div>
+
+            <h3>
+              Parle-G Distribution
+            </h3>
+
+            <p>
+              Managed FMCG wholesale distribution across 80+ retail
+              stores with weekly dispatches of approximately ₹8 lakh.
+            </p>
+
+            <span class="work-tag">
+              DISTRIBUTION · SALES
+            </span>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 4 -->
+
+        <article class="work-card">
+
+          <div class="work-number">
+            04
+          </div>
+
+          <div>
+
+            <h3>
+              Victory Lap
+            </h3>
+
+            <p>
+              Supported business development and student lead
+              management, contributing to ₹2.3 lakh in revenue
+              generation.
+            </p>
+
+            <span class="work-tag">
+              BUSINESS DEVELOPMENT · MARKETING
+            </span>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         SKILLS
+    ==================================================== -->
+
+    <section class="skills section" id="skills">
+
+      <div class="section-label">
+        SKILLS
+      </div>
+
+      <div class="skills-content">
+
+        <div class="skill-group">
+
+          <h3>
+            Marketing
+          </h3>
+
+          <p>
+            Brand Strategy · Market Research · Customer Journey
+            Mapping · STP · AIDA · Competitor Analysis
+          </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+          <h3>
+            Sales
+          </h3>
+
+          <p>
+            FMCG Sales · Retail Sales · Distribution ·
+            Sales Operations · Retailer Management · SFA
+          </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+          <h3>
+            Tools
+          </h3>
+
+          <p>
+            MS PowerPoint · Canva · Microsoft Excel ·
+            AMUL SFA · LinkedIn
+          </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+          <h3>
+            Business
+          </h3>
+
+          <p>
+            Business Strategy · Stakeholder Management ·
+            Performance Management · Market Analysis
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         EDUCATION
+    ==================================================== -->
+
+    <section class="education section">
+
+      <div class="section-label">
+        EDUCATION
+      </div>
+
+      <div class="education-list">
+
+
+        <div class="education-item">
+
+          <span class="education-year">
+            PRESENT
+          </span>
+
+          <div>
+
+            <h3>
+              MBA — Marketing
+            </h3>
+
+            <p>
+              COEP Technological University, Pune
+            </p>
+
+            <small>
+              7.41 / 10
+            </small>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="education-item">
+
+          <span class="education-year">
+            2024
+          </span>
+
+          <div>
+
+            <h3>
+              B.Sc. (Hons.) Agriculture
+            </h3>
+
+            <p>
+              MPKV / Dr. D. Y. Patil College of Agriculture
+            </p>
+
+            <small>
+              7.76 / 10
+            </small>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="education-item">
+
+          <span class="education-year">
+            2020
+          </span>
+
+          <div>
+
+            <h3>
+              XII — Science
+            </h3>
+
+            <p>
+              Maharashtra State Board
+            </p>
+
+            <small>
+              64.46%
+            </small>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="education-item">
+
+          <span class="education-year">
+            2018
+          </span>
+
+          <div>
+
+            <h3>
+              X — General
+            </h3>
+
+            <p>
+              Maharashtra State Board
+            </p>
+
+            <small>
+              89.40%
+            </small>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         ACHIEVEMENTS
+    ==================================================== -->
+
+    <section class="achievements section">
+
+      <div class="section-label">
+        ACHIEVEMENTS
+      </div>
+
+      <div class="achievement-content">
+
+        <h2>
+          Beyond the<br>
+          <em>numbers.</em>
+        </h2>
+
+        <div class="achievement-list">
+
+          <div class="achievement-item">
+
+            <strong>
+              4th Rank
+            </strong>
+
+            <span>
+              National-Level Millet Quiz Competition —
+              Eat Right Millet Mela & Walkathon 2023
+            </span>
+
+          </div>
+
+
+          <div class="achievement-item">
+
+            <strong>
+              150+
+            </strong>
+
+            <span>
+              Farmers trained through agriculture technology
+              demonstrations and digital tools.
+            </span>
+
+          </div>
+
+
+          <div class="achievement-item">
+
+            <strong>
+              250+
+            </strong>
+
+            <span>
+              Farmers engaged through Krushi Melava activities.
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         CONTACT
+    ==================================================== -->
+
+    <section class="contact section" id="contact">
+
+      <div class="section-label">
+        CONTACT
+      </div>
+
+      <div class="contact-content">
+
+        <h2>
+          Let’s build<br>
+          something <em>meaningful.</em>
+        </h2>
+
+        <p>
+          Interested in sales, marketing, FMCG, business strategy
+          or collaboration? Let’s connect.
+        </p>
+
+        <div class="contact-links">
+
+          <a href="mailto:rajpatil8502@gmail.com">
+            rajpatil8502@gmail.com
+          </a>
+
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            LinkedIn
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
   </main>
 
-  <footer>
-    <span>© <span id="year"></span> Raj Patil</span>
-    <span>Designed & built with HTML, CSS & JS.</span>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+    <div>
+      © <span id="year"></span> Raj Patil
+    </div>
+
+    <div>
+      Sales · Marketing · FMCG · Strategy
+    </div>
+
   </footer>
 
+
+
+  <!-- Main JavaScript -->
   <script src="script.js"></script>
+
 </body>
+
 </html>
+```
+
+### Important
+
+**Do not delete sections from this file.** If you want to change your statistics later, only edit the part between:
+
+```html
+<!-- ===================================================
+     STATS / ACHIEVEMENT BOXES
+==================================================== -->
+```
+
+and the closing:
+
+```html
+</section>
+```
+
+Your stats are currently:
+
+* **₹23.43L** — Sales Order Value — AMUL Pune
+* **80+** — Retail Stores Managed — Parle-G
+* **₹8L** — Weekly FMCG Dispatch — Parle-G
+* **50+** — MBA Students Mentored — Symbiosis International University Dubai
+* **₹2.3L** — Revenue Supported — Victory Lap YT Channel
+* **150+** — Farmers Trained — Agriculture Programs
+* **180+** — Students Managed — Sports Events
+* **₹60K+** — Sales Generated — AMUL Rakhi Campaign
+
+The experience and education information above is based on your resume.
+
+**One thing to remember:** this `index.html` uses your existing `styles.css` and `script.js`, and your photo must remain named `raj-photo.jpg` in the same folder as `index.html`.
